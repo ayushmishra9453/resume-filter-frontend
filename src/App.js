@@ -1,23 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
-
+import UploadForm from './components/UploadForm';
+import Search from './components/Search';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="min-h-screen p-6 bg-gray-50">
+      <div className="max-w-4xl mx-auto">
+        <h1 className="text-2xl font-semibold mb-4">Resume Filter</h1>
+        <UploadForm />
+        <div className="my-6" />
+        <Search />
+      </div>
     </div>
   );
 }
