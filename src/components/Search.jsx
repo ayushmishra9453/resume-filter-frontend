@@ -21,11 +21,11 @@ function Search() {
 
   async function doSearch(e){
     e?.preventDefault();
-    if(q.trim()) return;
+    if(!q.trim()) return;
 
     setLoading(true)
     try{
-      const res=await fetch(`http://localhost:3000/api/resumes/search?q=${encodeURIComponent(q)}`)
+      const res=await fetch(`https://resume-filter-backend-haan.onrender.com/api/resumes/search?q=${encodeURIComponent(q)}`)
       const data = await res.json();
       setResults(data.results || []);
     }

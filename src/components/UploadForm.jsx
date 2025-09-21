@@ -22,7 +22,7 @@ function UploadForm() {
     fd.append('skills',skills)
 
     try{
-        const res=await fetch('http://localhost:3000/api/resumes/upload',{
+        const res=await fetch('https://resume-filter-backend-haan.onrender.com/api/resumes/upload',{
             method:'POST',
             body:fd
         });
