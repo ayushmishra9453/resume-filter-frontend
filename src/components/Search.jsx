@@ -12,12 +12,12 @@ function highlightText(text,keywords){
     const pattern=keywords.map(k=>k.replace(/[-[\]{}()*+?.,\\^$|#\s]/g,'\\$&')).join('|')
     const re= new RegExp(`(${pattern})`,'gi');
     return esc.replace(re, '<mark>$1</mark>');
-}
+};
 
 function Search() {
-  const [q,setQ]=useState('')
-  const [results,setResults]=useState([])
-  const [loading,setLoading]=useState(false)
+  const [q,setQ]=useState('');
+  const [results,setResults]=useState([]);
+  const [loading,setLoading]=useState(false);
 
   async function doSearch(e){
     e?.preventDefault();
