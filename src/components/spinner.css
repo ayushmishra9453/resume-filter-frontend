@@ -1,14 +1,32 @@
 .spinner {
-   width: 56px;
-   height: 56px;
-   border: 11.2px #474bff double;
-   border-left-style: solid;
-   border-radius: 50%;
-   animation: spinner-aib1d7 0.75s infinite linear;
+   width: 40px;
+   height: 40px;
+   border: 4.8px solid #47a5ff;
+   animation: spinner-kk2y8v 3.5999999999999996s infinite;
 }
 
-@keyframes spinner-aib1d7 {
-   to {
-      transform: rotate(360deg);
+@keyframes spinner-kk2y8v {
+   0% {
+      transform: rotate(0deg);
+   }
+
+   10%, 15% {
+      transform: rotate(-90deg);
+   }
+
+   20%, 25% {
+      transform: rotate(-180deg);
+   }
+
+   30%, 35% {
+      transform: rotate(-270deg);
+   }
+
+   40%, 50% {
+      transform: rotate(-360deg);
+   }
+
+   100% {
+      transform: rotate(720deg);
    }
 }
