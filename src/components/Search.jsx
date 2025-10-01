@@ -37,9 +37,9 @@ function Search() {
   const keywords= q.split(/,|\s+/).map(s=>s.trim()).filter(Boolean)
   return (
     <div className="p-4 bg-white shadow rounded">
-      <form onSubmit={doSearch} className="mb-3">
-        <input className="border p-2 w-3/4" placeholder="enter keywords (comma or space separated)" value={q} onChange={e=>setQ(e.target.value)} />
-        <button className="ml-2 bg-green-600 text-white px-3 py-2 rounded" disabled={loading}>{loading ? 'Searching...' : 'Search'}</button>
+      <form onSubmit={doSearch} className="mb-3 flex flex-col md:flex-row">
+        <input className="border p-2 w-full md:w-3/4" placeholder="enter keywords (comma or space separated)" value={q} onChange={e=>setQ(e.target.value)} />
+        <button className="md:ml-2 my-2 md:my-0 bg-green-800 text-white px-4 py-2 rounded hover:bg-blue-600" disabled={loading}>{loading ? 'Searching...' : 'Search'}</button>
       </form>
 
       <div>
